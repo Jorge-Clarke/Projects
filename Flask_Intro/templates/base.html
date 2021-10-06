@@ -4,9 +4,8 @@
     <meta charset = 'UTF-8'>
     <meta name="viewport" content='width=device-width, initial-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <link rel='stylesheet' href="{{ url_for('static', filename='css/main.css') }}"> 
-        <!-- '{{'' is for things your want to print, '{%' are used to for loops and stuff like that -->
-    {% block head %}{% endblock %}  <!-- jinja2 syntax: we create a block on this template. Here we will put our code for each page -->                              
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/main.css') }}">   
+    {% block head %}{% endblock %}  
 </head>   
 <body>
     {% block body %}{% endblock %}   
