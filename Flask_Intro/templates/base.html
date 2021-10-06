@@ -4,8 +4,11 @@
     <meta charset = 'UTF-8'>
     <meta name="viewport" content='width=device-width, initial-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <link rel='stylesheet' href="{{ url_for('static', filename='css/main.css') }}">   
-    {% block head %}{% endblock %}  
+    <link rel='stylesheet' href="{{ url_for('static', filename='css/main.css') }}">    <!-- linking the css file --> 
+    {% block head %}{% endblock %}  <!-- We created a block on this template, for template inheritance.                                         
+                                        We will put here our code for each page -->  
+<!-- This is jinja2 syntax, a template engine that flask uses.
+    The 'double-brackets' are used for things your want to print. The 'bracket-%' are used to for loops, if else, etc.  -->
 </head>   
 <body>
     {% block body %}{% endblock %}   

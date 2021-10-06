@@ -1,42 +1,41 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<!-- <title>Task Master</title> -->
+<title>Task Master</title>
 
 {% endblock %}
 
 {% block body %}
-<h1>a onde la viste pollo qliao!</h1> 
-<!-- <div class="content">
-    <h1 style="text-align: center">Task Master</h1>
-    {% if tasks|length < 1 %}
+<div class="content">
+    <h1 style="text-align: center">Task Master</h1>     <!-- h1 = header 1 -->
+<!--    {% if tasks|length < 1 %}
     <h4 style="text-align: center">There are no tasks. Create one below!</h4>
-    {% else %}
+    {% else %} -->
     <table>
-        <tr>
-            <th>Task</th>
+        <tr>    <!-- tr = table row -->
+            <th>Task</th>   <!-- th = table header -->
             <th>Added</th>
             <th>Actions</th>
         </tr>
-        {% for task in tasks %}
+       {% for task in tasks %} 
             <tr>
                 <td>{{ task.content }}</td>
-                <td>{{ task.date_created.date() }}</td>
-                <td>
-                    <a href="/delete/{{task.id}}">Delete</a>
+                <td>{{ task.date_created.date() }}</td> 
+                <td> 
+                    <a href="">Delete</a>    <!-- <a href="/delete/{{task.id}}">Delete</a> -->
                     <br>
-                    <a href="/update/{{task.id}}">Update</a>
+                    <a href="">Update</a>     <!-- <a href="/update/{{task.id}}">Update</a> -->
                 </td>
             </tr>
-        {% endfor %}
+       {% endfor %} 
     </table>
-    {% endif %}
+ <!--   {% endif %}  -->
 
-    <div class="form">
+ <!--   <div class="form"> -->
         <form action="/" method="POST">
             <input type="text" name="content" id="content">
             <input type="submit" value="Add Task">
         </form>
-    </div>
-</div> -->
+ <!--   </div>  -->
+</div> 
 {% endblock %}
