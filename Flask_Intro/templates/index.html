@@ -8,9 +8,9 @@
 {% block body %}
 <div class="content">
     <h1 style="text-align: center">Task Master</h1>     <!-- h1 = header 1 -->
-<!--    {% if tasks|length < 1 %}
+    {% if tasks|length < 1 %}   <!-- The symbol '|lenght' is a jinja2 filter -->   
     <h4 style="text-align: center">There are no tasks. Create one below!</h4>
-    {% else %} -->
+    {% else %} 
     <table>
         <tr>    <!-- tr = table row -->
             <th>Task</th>   <!-- th = table header -->
@@ -22,20 +22,20 @@
                 <td>{{ task.content }}</td>
                 <td>{{ task.date_created.date() }}</td> 
                 <td> 
-                    <a href="">Delete</a>    <!-- <a href="/delete/{{task.id}}">Delete</a> -->
+                    <a href="/delete/{{task.id}}">Delete</a> 
                     <br>
-                    <a href="">Update</a>     <!-- <a href="/update/{{task.id}}">Update</a> -->
+                    <a href="/update/{{task.id}}">Update</a> 
                 </td>
             </tr>
        {% endfor %} 
     </table>
- <!--   {% endif %}  -->
+   {% endif %}  
 
- <!--   <div class="form"> -->
+   <div class="form"> 
         <form action="/" method="POST">
             <input type="text" name="content" id="content">
             <input type="submit" value="Add Task">
         </form>
- <!--   </div>  -->
+    </div>  
 </div> 
 {% endblock %}
